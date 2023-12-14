@@ -710,11 +710,11 @@ knitr::include_graphics("assets/wd7.png")
 
 ---
 
-class: center, middle, inverse
+class: center, middle
 
 # Questions?
 
-(you can also find these slides online: )
+(you can also find these slides online, [here](https://joshmerfeld.github.io/sharedworkspaces/#1))
 
 
 
