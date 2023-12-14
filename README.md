@@ -1,5 +1,7 @@
 # Shared workspaces
 
-- A short introduction to the importance of thinking through shared workspaces
-- Focus is on Dropbox
-  - Future slides might also include Github
+- This is a short slide deck discussing best practices for working with others
+
+- It focuses on two key things:
+  - Using Dropbox to share data
+  - Using relative paths so that everything works for everyone!

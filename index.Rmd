@@ -698,6 +698,7 @@ knitr::include_graphics("assets/wd7.png")
 - I use two key tools to do this:
   - Dropbox
   - Relative file paths
+  - My website (so three things, I guess!)
 <br><br>
 - This takes some getting used to, but it's worth it!
   - It's hard to overstate how much easier it is to work with others when you do this
@@ -713,7 +714,7 @@ class: center, middle, inverse
 
 # Questions?
 
-(you can also find these slides on Github: )
+(you can also find these slides online: )
 
 
 
