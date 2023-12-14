@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Thinking through shared workspaces</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Josh Merfeld    KDI School and IZA " />
+    <script src="index_files/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Thinking through shared workspaces
+]
+.author[
+### Josh Merfeld <br> <font size = "5"> KDI School and IZA </font>
+]
+.date[
+### December 2023
+]
+
+---
+
+
+
+
+
+&lt;style type="text/css"&gt;
+    /* Table width = 100% max-width */
+
+    /* .remark-slide table{
+      width: 100%;
+    } */
+
+    /* Change the background color to white for shaded rows (even rows) */
+
+    .title-slide h3:nth-of-type(2) {
+      color: red;
+    } 
+
+    .remark-slide thead, .remark-slide tr:nth-child(n) {
+      background-color: #A7A9AC;
+    }
+
+    .remark-slide table {
+      background-color: #A7A9AC;
+    }
+    
+    tfoot {
+      font-size: 80%;
+    }
+
+    table{
+      border-collapse: collapse;
+      border-color: transparent;
+      background-color: #A7A9AC;
+    }
+
+    /* .hljs-github {
+      background-image: url("logo.png");
+      background-position: bottom left;
+      background-size: 10%;
+    }
+
+    .inverse {
+      background-image: url("");
+      background-position: bottom left;
+      background-size: 10%;
+    } */
+
+    .title-slide {
+      background-image: url("logo_title.png");
+      background-position: bottom left;
+      background-size: 20%;
+    }
+
+
+&lt;/style&gt;
+
+
+
+
+
+
+
+## What are these slides about?
+&lt;br&gt;
+- Consider a project you have
+&lt;br&gt;&lt;br&gt;
+
+- If you're working on your own, you know where everything is...
+&lt;br&gt;&lt;br&gt;
+--
+
+- But what if you're working with others?
+  - What if I want to use your code to update our results file?
+&lt;br&gt;&lt;br&gt;
+--
+
+- Let's think through how to make this easier. On **everyone**.
+
+
+
+
+---
+
+## Consider a project I'm working on
+
+&lt;img src="assets/intro1.png" width="100%" /&gt;
+
+- Three people
+- All working with the same data
+- All working with the same scripts
+
+
+
+
+---
+
+## Here's the layout of folders
+
+
+&lt;img src="assets/intro2.png" width="100%" /&gt;
+
+
+
+
+
+
+---
+
+## Here are some actual folders on my computer
+
+
+&lt;img src="assets/intro3.png" width="100%" /&gt;
+
+
+
+
+
+---
+
+## Here are some actual folders on my computer
+
+
+&lt;img src="assets/intro4.png" width="100%" /&gt;
+
+
+
+
+
+---
+
+## Here are some actual folders on my computer
+
+
+&lt;img src="assets/intro5.png" width="100%" /&gt;
+
+
+
+
+
+---
+
+## Here are some actual folders on my computer
+
+
+&lt;img src="assets/intro6.png" width="100%" /&gt;
+
+
+
+
+---
+
+## There's stuff all over the place!
+&lt;br&gt;
+- First things first: we need to keep track of where everything is
+  - We all need to be consistent in where we put stuff
+&lt;br&gt;&lt;br&gt;
+
+- Second: we need to make sure that anyone's update to data/scripts are reflected in everyone's work
+  - Otherwise, we run into problems
+&lt;br&gt;&lt;br&gt;
+
+- Third: we need to make sure that scripts/do-files run on everyone's computers
+  - Importantly, this means **we cannot be using absolute paths**
+  - More in a minute
+
+
+
+---
+class: inverse, center, middle
+
+# Keeping track of where everything is
+
+
+
+
+---
+
+## Keeping track of where everything is
+&lt;br&gt;
+- The real key here is just making sure you are consistent in where you put stuff
+&lt;br&gt;&lt;br&gt;
+- For example, the `/data` folder on the previous slide has **all** the raw data, separately for each country
+&lt;br&gt;&lt;br&gt;
+- The `/results` folder has **all** the results, separately for each country
+&lt;br&gt;&lt;br&gt;
+- The `/human-capital` folder has **all** the scripts
+  - This includes, cleaning, analysis, and the draft of the paper
+  - Note: it's named this way because it's a (private) repository on Github
+
+
+
+
+---
+
+## Keeping track of where everything is
+&lt;br&gt;
+- You all probably do this in your own way
+&lt;br&gt;&lt;br&gt;
+- When working with others, it's helpful to have a quick discussion at the beginning about what folders are what
+&lt;br&gt;&lt;br&gt;
+- There's no "right" way to do this, just make sure everyone does it the same way
+
+
+
+---
+class: inverse, center, middle
+
+# Making sure everything is up to date
+
+
+
+
+---
+
+## Making sure everything is up to date
+&lt;br&gt;
+- This is a very important part of working with others
+&lt;br&gt;&lt;br&gt;
+- If I store things only on my computer, then you can't use them
+  - This is a problem if I'm the only one who can run the code
+&lt;br&gt;&lt;br&gt;
+- Thankfully, there are quite a few options for sharing folders
+  - Dropbox, Google Drive, OneDrive, Github, etc.
+
+
+
+
+---
+
+## Which one should we use?
+&lt;br&gt;
+- I use two every single day:
+  - Dropbox
+  - Github
+&lt;br&gt;&lt;br&gt;
+- However, I use them for different purposes
+  - I view Github more for sharing **code**
+  - I view Dropbox more for sharing **data**
+&lt;br&gt;&lt;br&gt;
+- Important to note that you can use both for both purposes, though!
+
+
+
+
+
+---
+
+&lt;img src="assets/db1.png" width="100%" /&gt;
+
+
+
+
+---
+
+## One downside: Dropbox is not (usually) free
+
+&lt;img src="assets/db2.png" width="100%" /&gt;
+
+
+
+
+---
+
+## One downside: Dropbox is not (usually) free
+
+&lt;img src="assets/db3.png" width="100%" /&gt;
+
+
+
+---
+
+## Using Dropbox
+&lt;br&gt;
+- Once you have an account, you can download the Dropbox program/app to your computer
+&lt;br&gt;&lt;br&gt;
+- This will create a folder on your computer
+  - Here's the key: **anything** you put in this folder will be synced to the cloud
+  - This means that if you have that Dropbox folder on two computers, they will be synced
+&lt;br&gt;&lt;br&gt;
+- You can also selectively do two things:
+  - Have files live only on the cloud (not on your computer)
+  - Share folders with others
+
+
+
+
+---
+
+## Selective sync
+&lt;br&gt;
+- Many of my projects are quite large
+  - The folder I showed you earlier is 52.5 GB
+&lt;br&gt;&lt;br&gt;
+- When I finish a project, I don't want to keep it on my computer
+  - But I also don't want to delete it
+  - Instead, I leave it in my Dropbox, but I don't sync it to my computer
+&lt;br&gt;&lt;br&gt;
+- I also sometimes do this with raw data for ongoing projects if I think I'm done with it
+  - If I need it again, I can just download it from Dropbox
+
+
+
+
+---
+
+## Sharing folders with others
+&lt;br&gt;
+- This is the key part of Dropbox for me
+&lt;br&gt;&lt;br&gt;
+- I can share a folder with you, and then we can both work on it
+  - If we both have Dropbox accounts and folders on our computers, then both folders will update with any changes!
+&lt;br&gt;&lt;br&gt;
+- This is how I work with my coauthors:
+  - We have a shared folder for each project
+  - I work on something today
+  - My coauthor(s) can see the updated folders as soon as they open their computers
+&lt;br&gt;&lt;br&gt;
+--
+
+
+**Pretty straightforward, right?**
+
+
+
+
+---
+
+## Another benefit of paid accounts
+&lt;br&gt;
+- There's one more thing I want to point out
+&lt;br&gt;&lt;br&gt;
+- If you have a paid account, you can see the history of changes to a file
+  - This is **incredibly** useful
+  - If you accidentally delete something, you can get it back
+  - If you accidentally change something, you can get it back
+&lt;br&gt;&lt;br&gt;
+- The length you can go back depends on the type of account you have
+  - The cheapest one can go back 30 days
+
+
+
+---
+class: inverse, center, middle
+
+# Making sure everything can run on everyone's computers
+
+
+
+
+---
+
+## A problematic example
+&lt;br&gt;
+- Suppose you and I are working on a project
+&lt;br&gt;&lt;br&gt;
+- Let's say I have a folder on my computer called `C:/Users/Josh/Dropbox/Projects/Project1`
+  - I have a script, and I start it like this:
+&lt;br&gt;&lt;br&gt;
+
+```r
+data &lt;- read_csv("C:/Users/Josh/Dropbox/Projects/Project1/data.csv")
+```
+
+&lt;br&gt;&lt;br&gt;
+- What's the problem with this?
+--
+
+  - **You can't run this on your computer!**
+
+
+
+
+
+---
+
+## A problematic example
+&lt;br&gt;
+
+```r
+data &lt;- read_csv("C:/Users/Josh/Dropbox/Projects/Project1/data.csv")
+```
+
+&lt;br&gt;&lt;br&gt;
+- This is what's referred to as an **absolute path**
+  - It's a path that is specific to my computer
+  - It's not a path that will work on your computer
+&lt;br&gt;&lt;br&gt;
+- Instead, we want to use a **relative path**
+  - This is a path that is relative to the folder we're in
+  - It's a path that will work on your computer
+
+
+
+
+
+---
+
+## Working directories
+&lt;br&gt;
+- The key to using relative paths is to make sure you're in the right folder
+  - We can do this by thinking about **working directories**
+&lt;br&gt;&lt;br&gt;
+- Let me show you an example using both Stata and R
+
+
+
+
+
+---
+
+&lt;img src="assets/wd1.png" width="100%" /&gt;
+
+
+
+
+
+---
+
+## Working directories in Stata
+&lt;br&gt;
+- You can find your current working directory by typing `pwd`
+&lt;br&gt;&lt;br&gt;
+- You can set working directories by typing `cd "C:/Users/Josh/Dropbox/Projects/Project1"`
+  - However note that this is an absolute path!
+  - In other words, don't do this *in your do-file*
+&lt;br&gt;&lt;br&gt;
+- So what do we do?
+&lt;br&gt;&lt;br&gt;
+- A key is to understand how Stata sets working directories
+
+
+
+
+
+---
+
+&lt;img src="assets/wd2.png" width="100%" /&gt;
+&lt;br&gt;&lt;br&gt;
+
+- The location of this file is `/Users/Josh/Dropbox/Papers/minWage_weathShocks/Do-files/STATA/analysis.do`
+  - Let's see what happens to the working directory if we open this do-file by double clicking on it (when Stata is closed)
+
+
+
+
+
+---
+
+&lt;img src="assets/wd3.png" width="100%" /&gt;
+
+
+
+
+
+---
+
+## Stata sets the wd to the folder where the do-file is located
+&lt;br&gt;
+- As long as you open the do-file by double clicking it, the wd will be set to the folder where the do-file is located
+&lt;br&gt;&lt;br&gt; 
+- Everyone needs to be working from the *same* working directory
+  - And everyone needs to set it without explicitly references the absolute path in the do-file/script
+  - i.e. it's okay if you manually set the wd, but all paths in the do-file should be *relative to that path*
+&lt;br&gt;&lt;br&gt; 
+- Let's look at setting relative paths
+
+
+
+
+
+---
+
+## Example
+
+&lt;img src="assets/wd4.png" width="100%" /&gt;
+&lt;br&gt;&lt;br&gt;
+
+- My working directory is the `human-capital` folder
+- I want to reference *all* files relative to this folder
+  - For example, `madagascar/3.estimation_ebp.R` is how I would reference the file `3.estimation_ebp.R` in the `madagascar` folder
+
+
+
+
+---
+
+## Example
+
+&lt;img src="assets/wd5.png" width="100%" /&gt;
+&lt;br&gt;&lt;br&gt;
+
+- Let's look at the first two paths
+
+
+
+
+---
+
+## Example
+
+&lt;img src="assets/wd6.png" width="100%" /&gt;
+&lt;br&gt;&lt;br&gt;
+
+- `source("functions/sampling_fun.R")` references this file
+
+
+
+
+---
+
+## Example
+&lt;br&gt;
+- What about the path `"../data/madagascar/features/all/all.csv"`?
+&lt;br&gt;&lt;br&gt;
+- What does the `..` mean?
+  - This means to **go up one level** from the working directory
+  - From the higher level, we can then go into the `data` folder
+
+
+
+
+---
+
+## Example
+
+&lt;img src="assets/wd7.png" width="100%" /&gt;
+&lt;br&gt;&lt;br&gt;
+
+- It goes up to the folder on the left, then down into the `data` folder
+  - Then into the `madagascar` folder, etc.
+
+
+
+
+---
+
+## This runs for everyone
+&lt;br&gt;
+- The key is that this will run for everyone
+  - As long as everyone sets their working directory to the `human-capital` folder, *every single file in the entire project* will run for everyone!
+&lt;br&gt;&lt;br&gt;
+- This is the key to working with others
+  - Everyone needs to know what the default working directory should be
+  - Everyone should make sure that all paths are relative to that working directory
+  - And voila! Everyone can run everything!
+
+
+
+
+---
+
+## A short rejoinder on Github
+&lt;br&gt;
+- I find Github very useful
+  - I actually put my applied microeconometrics class on Github
+  - [https://github.com/JoshMerfeld/applied-microeconometrics](https://github.com/JoshMerfeld/applied-microeconometrics)
+&lt;br&gt;&lt;br&gt;
+- However, I don't use it for sharing data
+  - I use it for sharing code
+  - The simple reason: Github isn't designed to host large files
+&lt;br&gt;&lt;br&gt;
+- Not all of my Github code is public (yet)
+  - I will eventually turn everything public as I finish projects
+  - I sometimes keep it public even when I'm not done, like my pollution paper
+  - [https://github.com/JoshMerfeld/pollution_development](https://github.com/JoshMerfeld/pollution_development)
+
+
+
+
+---
+
+## Wrapping up
+&lt;br&gt;
+- The key to working with others is to make sure everyone is on the same page
+  - Everyone needs to know where everything is
+  - Everyone needs to make sure everything is up to date
+  - Everyone needs to make sure everything runs on everyone's computer
+&lt;br&gt;&lt;br&gt;
+- I use two key tools to do this:
+  - Dropbox
+  - Relative file paths
+&lt;br&gt;&lt;br&gt;
+- This takes some getting used to, but it's worth it!
+  - It's hard to overstate how much easier it is to work with others when you do this
+  - You'll also find it much easier to go back to your work when everything is organized
+
+
+
+
+
+---
+
+class: center, middle, inverse
+
+# Questions?
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
